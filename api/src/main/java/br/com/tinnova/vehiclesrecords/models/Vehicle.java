@@ -1,9 +1,6 @@
 package br.com.tinnova.vehiclesrecords.models;
 
-
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
@@ -22,21 +19,18 @@ public class Vehicle {
     @Column(name = "id", updatable = false)
     private UUID id;
 
-    @NotBlank(message = "Model is mandatory")
     private String model;
 
-    @NotBlank(message = "Brand is mandatory")
     @Enumerated(EnumType.STRING)
     private Brand brand;
 
-    @NotNull(message = "Production year is mandatory")
     @Column(name = "production_year")
     private Integer year;
 
     private String description;
 
     private Boolean isSold;
-    @NotBlank(message = "Color is mandatory")
+
     private String color;
 
     @CreationTimestamp
