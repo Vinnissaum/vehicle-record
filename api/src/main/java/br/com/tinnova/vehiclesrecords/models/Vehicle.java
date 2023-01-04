@@ -36,6 +36,8 @@ public class Vehicle {
     private String description;
 
     private Boolean isSold;
+    @NotBlank(message = "Color is mandatory")
+    private String color;
 
     @CreationTimestamp
     @Column(nullable = false,  columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")

@@ -17,6 +17,8 @@ public class VehicleDTO {
 
     private Integer year;
 
+    private String color;
+
     private String description;
 
     private Boolean isSold;

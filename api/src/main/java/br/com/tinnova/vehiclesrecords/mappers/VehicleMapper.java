@@ -17,6 +17,7 @@ public class VehicleMapper {
         dto.setCreatedAt(entity.getCreatedAt());
         dto.setUpdatedAt(entity.getUpdatedAt());
         dto.setIsSold(entity.getIsSold());
+        dto.setColor(entity.getColor());
 
         return dto;
     }
@@ -31,6 +32,7 @@ public class VehicleMapper {
         entity.setCreatedAt(dto.getCreatedAt());
         entity.setUpdatedAt(dto.getUpdatedAt());
         entity.setIsSold(dto.getIsSold());
+        entity.setColor(dto.getColor());
 
         return entity;
     }
