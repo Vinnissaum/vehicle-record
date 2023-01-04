@@ -39,7 +39,7 @@ public class Vehicle {
 
     @CreationTimestamp
     @Column(nullable = false,  columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 
     @UpdateTimestamp
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
