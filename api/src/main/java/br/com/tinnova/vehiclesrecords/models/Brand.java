@@ -1,4 +1,4 @@
-package br.com.tinnova.vehiclesrecords.vehicle;
+package br.com.tinnova.vehiclesrecords.models;
 
 public enum Brand {
     VOLKSWAGEN,
