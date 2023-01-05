@@ -12,6 +12,10 @@ class VehicleService {
   deleteVehicle(id) {
     return this.HttpClient.delete(`/veiculos/${id}`);
   }
+
+  createVehicle(vehicleData) {
+    return this.HttpClient.post('/veiculos', { body: vehicleData });
+  }
 }
 
 export default new VehicleService();
