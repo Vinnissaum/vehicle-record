@@ -74,4 +74,32 @@ public class VehicleController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/disponiveis")
+    public ResponseEntity<List<VehicleDTO>> getNotSoldVehicles() {
+        List<VehicleDTO> availableVehicles = service.getNotSoldVehicles();
+
+        return ResponseEntity.ok(availableVehicles);
+    }
+
+
+    @GetMapping("/quantidade-por-decada")
+    public ResponseEntity<Long> countByDecade(@RequestParam("decada") Integer decade) {
+        Long count = service.countByDecade(decade);
+
+        return ResponseEntity.ok(count);
+    }
+
+    @GetMapping("/quantidade-por-marca")
+    public ResponseEntity<Long> countByBrand(@RequestParam("marca") String brand) {
+        Long count = service.countByBrand(brand);
+
+        return ResponseEntity.ok(count);
+    }
+
+    @GetMapping("/registros-da-semana")
+    public ResponseEntity<List<VehicleDTO>> getWeekVehiclesRegisters() {
+        List<VehicleDTO> registers = service.getWeekVehiclesRegisters();
+
+        return ResponseEntity.ok(registers);
+    }
 }

@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ReflectionUtils;
 
 import java.lang.reflect.Field;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -102,4 +103,28 @@ public class VehicleService {
         });
     }
 
+    @Transactional
+    public List<VehicleDTO> getNotSoldVehicles() {
+        List<Vehicle> vehicles = repository.findByIsSoldFalse();
+
+        return vehicles.stream().map(mapper::toDTO).toList();
+    }
+
+    public Long countByDecade(Integer decade) {
+
+        return repository.countByDecade(decade);
+    }
+
+    public Long countByBrand(String brand) {
+
+        return repository.countByBrandIgnoreCase(brand);
+    }
+
+    public List<VehicleDTO> getWeekVehiclesRegisters() {
+        LocalDateTime today = LocalDateTime.now();
+
+        List<Vehicle> vehicles = repository.findByCreatedAtBetween(today.minusWeeks(1), today);
+
+        return vehicles.stream().map(mapper::toDTO).toList();
+    }
 }
