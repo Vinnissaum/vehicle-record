@@ -8,4 +8,8 @@ interface VehicleRepositoryCustom {
 
     List<Vehicle> filterByBrandYearAndColor(String brand, Integer year, String color);
 
+    Long countByDecade(Integer decade);
+
+    Long countByBrandIgnoreCase(String brand);
+
 }
