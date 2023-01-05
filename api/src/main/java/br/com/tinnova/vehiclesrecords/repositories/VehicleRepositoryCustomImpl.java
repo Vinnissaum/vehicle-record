@@ -1,6 +1,5 @@
 package br.com.tinnova.vehiclesrecords.repositories;
 
-import br.com.tinnova.vehiclesrecords.models.QVehicle;
 import br.com.tinnova.vehiclesrecords.models.Vehicle;
 import com.querydsl.jpa.impl.JPAQuery;
 import jakarta.persistence.EntityManager;
