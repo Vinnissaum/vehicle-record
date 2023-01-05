@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
@@ -12,6 +13,8 @@ export default function NewVehicle() {
   const [year, setYear] = useState('');
   const [color, setColor] = useState('');
   const [isSold, setIsSold] = useState(false);
+
+  const navigate = useNavigate();
 
   const vehicle = {
     model, brand, year: Number(year), color, isSold,
@@ -41,6 +44,7 @@ export default function NewVehicle() {
     event.preventDefault();
 
     await VehicleService.createVehicle(vehicle);
+    navigate('/');
   }
 
   return (
