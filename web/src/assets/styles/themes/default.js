@@ -9,6 +9,7 @@ export default {
     },
     gray: {
       200: '#BCBCBC',
+      700: '#333333',
       900: '#222222',
     },
     danger: {
