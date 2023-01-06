@@ -1,0 +1,40 @@
+version: '3.7'
+services:
+  backend: 
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: vehicle-register-backend
+    environment:
+      - spring.datasource.url=jdbc:postgresql://db:5432/postgres
+      - spring.datasource.username=admin
+      - spring.datasource.password=admin
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+  frontend: 
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: vehicle-register-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+  
+  db: 
+    image: "postgres:15.1"
+    container_name: vehicle-register-db
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
