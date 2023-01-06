@@ -1,0 +1,305 @@
+_type: export
+__export_format: 4
+__export_date: 2023-01-05T23:05:31.846Z
+__export_source: insomnia.desktop.app:v2022.4.2
+resources:
+  - _id: req_916154431e3b47e49433361d9d0c4644
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672859352007
+    created: 1672848906258
+    url: "{{ _.baseUrl }}/veiculos"
+    name: List
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672855640465
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    parentId: null
+    modified: 1672848871666
+    created: 1672848871666
+    name: Vehicles
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_36d1c0ac422a460a8ff5b8556a93ccbf
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672872192479
+    created: 1672872185763
+    url: "{{ _.baseUrl }}/veiculos/disponiveis"
+    name: Find Available to Sell
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672855640452.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e8e16712b7e441e7bed94de6eee02f69
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672873275269
+    created: 1672872871853
+    url: "{{ _.baseUrl }}/veiculos/quantidade-por-decada?decada=2010"
+    name: Count by decade
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672855640446.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b6248737bcd94cb6b588a09c67527f4c
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672873700249
+    created: 1672873392783
+    url: "{{ _.baseUrl }}/veiculos/quantidade-por-marca?marca=chevrolet"
+    name: Count by brand
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672855640443.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0456b2f2c08a402dbeddccec90bf68ae
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672876680368
+    created: 1672876670229
+    url: "{{ _.baseUrl }}/veiculos/registros-da-semana"
+    name: Week Registers
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672855640441.5625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e3f7518cdf164652889c59d8dd881315
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672871177659
+    created: 1672869697112
+    url: "{{ _.baseUrl }}/veiculos/filtro?marca=chevrolet&ano=2020&cor=azul"
+    name: Filter
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672855640440
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_24a19560d1124bfeb90938e62cdc3df4
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672858575994
+    created: 1672855640415
+    url: "{{ _.baseUrl }}/veiculos/2ae851d6-4faf-4deb-9d63-f61ff69b4ee6"
+    name: Find
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672855640415
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0e59c35134f2427396e11afd6a2197fd
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672959868609
+    created: 1672853847094
+    url: "{{ _.baseUrl }}/veiculos"
+    name: Create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"model": "Golf GTI",
+        	"brand": "VOLKSWAGEN",
+        	"year": 2019,
+        	"isSold": false,
+        	"color": "vermelho"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_102d794840104833a730b3bbedc5621d
+    authentication: {}
+    metaSortKey: -1672853956875.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ac9af4faa4fa430bb82cd38e724c12d4
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672877186934
+    created: 1672860226704
+    url: "{{ _.baseUrl }}/veiculos/2ae851d6-4faf-4deb-9d63-f61ff69b4ee6"
+    name: Partial Update
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"year": 2022
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ab8af0eb56654e088113a744829278c0
+    authentication: {}
+    metaSortKey: -1672853115106.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f0e82f8579884ce0936c7f146544849f
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672865831587
+    created: 1672862582699
+    url: "{{ _.baseUrl }}/veiculos/2ae851d6-4faf-4deb-9d63-f61ff69b4ee6"
+    name: Update
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"model": "Jetta GLI",
+        	"brand": "VOLKSWAGEN",
+        	"year": 2019,
+        	"isSold": false,
+        	"color": "Nardo Gray"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ab8af0eb56654e088113a744829278c0
+    authentication: {}
+    metaSortKey: -1672852694221.3125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f70f0493b0e94f5c813a0a1600223cd5
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672859373541
+    created: 1672859313866
+    url: "{{ _.baseUrl }}/veiculos/b162512e-0e62-4688-b9ad-0f5d168a7bca"
+    name: Delete
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672852273336.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_2fa048983732f879ec0620696feac9a83d898f8d
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672848902801
+    created: 1672848871674
+    name: Base Environment
+    data:
+      baseUrl: http://localhost:8080
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+    color: null
+    isPrivate: false
+    metaSortKey: 1672848871674
+    _type: environment
+  - _id: jar_2fa048983732f879ec0620696feac9a83d898f8d
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672848871675
+    created: 1672848871675
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_366130d31141451892483777694065f2
+    parentId: wrk_45423d2aa2ca438685cfbe69e0dd8255
+    modified: 1672848871668
+    created: 1672848871668
+    fileName: Vehicles
+    contents: ""
+    contentType: yaml
+    _type: api_spec
