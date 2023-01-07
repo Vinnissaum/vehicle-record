@@ -9,6 +9,7 @@ This project was developed using the following technologies:
 
 - [Spring](https://spring.io/)
 - [Hibernate](https://hibernate.org/)
+- [Flyway](https://flywaydb.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [QueryDSL](http://querydsl.com/)
 - [JUnit](https://junit.org/junit5/)
